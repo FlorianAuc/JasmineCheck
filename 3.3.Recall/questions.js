@@ -1,17 +1,23 @@
 let selectElementsStartingWithA = (array) => {
-    return 'Write your method here';
+    array.shift();
+    array.splice(1,1);
+    return array;
 }
 
 let selectElementsStartingWithVowel = (array) => {
-    return 'Write your method here';
+    array.splice(0,2);
+    array.splice(1,1);
+    return array;
 }
 
 let removeNullElements = (array) => {
-    return 'Write your method here';
+    array.splice(2,2);
+    return array
 }
 
 let removeNullAndFalseElements = (array) => {
-    return 'Write your method here';
+    array.splice(2,3);
+    return array
 }
 
 let reverseWordsInArray = (array) => {
@@ -19,15 +25,35 @@ let reverseWordsInArray = (array) => {
 }
 
 let everyPossiblePair = (array) => {
-    return 'Write your method here';
+    let arr1 = [];
+    for(let i = 0; i < array.length; i ++){
+        let arr2 = [];
+        for(let j = 0; j < array.length; j++){
+            if(array[i] === array[j]){
+                console.log('same name');
+            }else{
+                // console.log(array[j]);
+                arr2.push(array[j]);
+            }
+            arr2.sort();
+        }
+        
+        arr1.push(arr2);
+    }
+
+    arr1.sort();
+    return arr1;
 }
 
+
 let allElementsExceptFirstThree = (array) => {
-    return 'Write your method here';
+    array.splice(0, 3);
+    return array
 }
 
 let addElementToBeginning = (array, element) => {
-    return 'Write your method here';
+    array.unshift(element);
+    return array
 }
 
 let sortByLastLetter = (array) => {
@@ -35,12 +61,19 @@ let sortByLastLetter = (array) => {
 }
 
 let getFirstHalf = (string) => {
-    return 'Write your method here';
+    let half = Math.round((string.length / 2));
+    return string.substring(0, half);
 }
 
 let makeNegative = (number) => {
-    return 'Write your method here';
+    if(number === Math.abs(number)){
+        number = - number;
+    }else{
+        number = number;
+    }
+    return number;
 }
+
 
 let numberOfPalindromes = (array) => {
     return 'Write your method here';
